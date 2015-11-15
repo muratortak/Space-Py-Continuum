@@ -1,7 +1,5 @@
 #Setup
-import socket
 import pygame
-import cv2
 from pygame.locals import *
 from startscreen import *
 from events import *
