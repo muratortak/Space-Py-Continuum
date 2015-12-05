@@ -15,3 +15,7 @@ while True:
     clock.tick(60)
     #main event handler
     SPC_events()
+
+
+    window.fill((10,10,10))
+    pygame.display.flip()
