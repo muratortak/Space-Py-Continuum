@@ -1,8 +1,8 @@
 import pygame
 from pygame.locals import *
 def SPC_startscreen(window):
-	font=pygame.font.SysFont('arial',120)
-	window.fill((0,0,0))
-#This is a test
-	window.blit(font.render("Space Py Continuum",True,(0,255,0)),(100,200))
-	pygame.display.flip()
+    window.fill((0,0,0))
+    splashscreen = pygame.image.load("startscreen.png")
+    window.blit(splashscreen,(0,0))
+    pygame.display.flip()
+    pygame.time.delay(2000)
