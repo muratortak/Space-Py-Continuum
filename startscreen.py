@@ -5,4 +5,4 @@ def SPC_startscreen(window):
     splashscreen = pygame.image.load("startscreen.png")
     window.blit(splashscreen,(0,0))
     pygame.display.flip()
-    pygame.time.delay(2000)
+    pygame.time.delay(1000)

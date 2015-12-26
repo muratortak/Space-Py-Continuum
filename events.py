@@ -1,34 +1,60 @@
 import pygame
 from globals import *
 from pygame.locals import *
-def SPC_events():
-        global gy
-        global gx
-        global gz
-	for event in pygame.event.get():
-		   #quit event
-     	   if event.type == QUIT:
-        	    exit()
-           #keyboard events
-           if event.type == pygame.KEYDOWN:
-               #move keys
-               if event.key == pygame.K_a:
-                   gx = gx-1
-                   print gx
-               if event.key == pygame.K_d:
-                   gx = gx+1
-                   print gx
-               if event.key == pygame.K_w:
-                   gy = gy+1
-                   print gy
-               if event.key == pygame.K_s:
-                   gy = gy-1
-                   print gy
+def SPC_events(globals):
+
+    for event in pygame.event.get():
+        #quit event
+        if event.type == QUIT:
+            exit()
+            #keyboard events
+        if event.type == pygame.KEYDOWN:
+            #move keys
+            if event.key == pygame.K_a:
+               globals.gx = globals.gx-1
+               
+            if event.key == pygame.K_d:
+                globals.gx = globals.gx+1
+             
+            if event.key == pygame.K_w:
+                globals.gy = globals.gy+1
+             
+            if event.key == pygame.K_s:
+                globals.gy = globals.gy-1
+               
                #ETC
-               if event.key == pygame.K_SPACE:
-                   print('space')
-               if event.key == pygame.K_b:
-                   print('build')
-               if event.key == pygame.K_g:
-                   print('key g')
-  	    
+            if event.key == pygame.K_SPACE:
+                globals.spacek = globals.spacek+1
+              
+            if event.key == pygame.K_b:
+                globals.buildk = globals.buildk+1
+               
+            if event.key == pygame.K_g:
+                globals.g = globals.g+1
+               
+        if event.type == pygame.KEYUP:
+               #move keys
+            if event.key == pygame.K_a:
+                globals.gx = globals.gx+1
+              
+            if event.key == pygame.K_d:
+                globals.gx = globals.gx-1
+              
+            if event.key == pygame.K_w:
+                globals.gy = globals.gy-1
+               
+            if event.key == pygame.K_s:
+                globals.gy = globals.gy+1
+               
+               #ETC
+            if event.key == pygame.K_SPACE:
+                globals.space = globals.space-1
+               
+            if event.key == pygame.K_b:
+                globals.buildk = globals.buildk-1
+               
+            if event.key == pygame.K_g:
+                globals.g = globals.g-1
+                  
+        
+                
